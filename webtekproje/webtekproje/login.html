@@ -1,62 +1,154 @@
+
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>login
- </title>
-    </head>
-    
-    <body>
-        <a href="hakkinda.html"> Ana Sayfa -</a>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Login</title>
+    <style>
+        body {
+            background-color: #333333;
+            color: white;
+            padding: 20px;
+            border: 2px solid white;
+            border-radius: 3px;
+            margin: 20px 3cm;
+        }
 
-        <a href="iletisim.html">Iletisim -</a>
+        h1 {
+            background-color: #18023f;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            padding: 5px;
+            border: 2px solid white;
+            border-radius: 8px;
+        }
 
-        <a href="ilgialanlarim.html"> Ilgi Alanlarim -</a
-            >
-        <a href="mirasimiz.html">Mirasimiz -</a>
+        button {
+            background-color: #18023f;
+            color: white;
+            padding: 10px 20px;
+            font-size: 20px;
+            text-align: center;
+            border: 2px solid white;
+            border-radius: 9px;
+            margin-left: 360px;
+            margin-top: -15px;
+            margin-bottom: 50px;
+            cursor: pointer;
+            opacity: 0.9;
+        }
 
-        <a href="sehrim.html">Sehrim-</a>
+        button:hover {
+            background-color: #00f7ff;
+        }
 
-        <a href="ozgecmis.html">Ozgecmis</a>
-         <br>
-         <br>
-         <br>
+        #kullanici, #sifre {
+            margin-top: 15px;
+            margin-bottom: 45px;
+            background-color: white;
+            border: #18023f 3px;
+            border-radius: 5px;
+            padding: 10px 20px;
+        }
 
+        #kullanicilabel, #sifrelabel {
+            font-size: 20px;
+            text-align: center;
+            background-color: #18023f;
+            color: white;
+            padding: 5px 20px;
+            border: 2px solid white;
+            border-radius: 9px;
+        }
+
+        nav {
+            border: 2px solid white;
+            border-radius: 8px;
+            padding: 15px;
+            background-color: #18023f;
+            text-align: center;
+            margin: 20px;
+        }
+
+        nav a:link {
+            color: #8defed;
+            text-decoration: none;
+            padding: 14px 25px;
+            font-size: 19px;
+        }
+
+        nav a:visited {
+            color: white;
+        }
+
+        nav a:hover {
+            color: #FF0000;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+<nav class="navbar bg-navbar-dark navbar-dark navbar-expand-sm">
+    <div class="container">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+            <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+            <li class="nav-item"><a class="nav-link" href="ilgialanlarim.html">İlgi Alanlarım</a></li>
+            <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
+            <li class="nav-item"><a class="nav-link" href="mirasimiz.html">Mirasımız</a></li>
+            <li class="nav-item"><a class="nav-link" href="ozgecmis.html">Özgeçmiş</a></li>
+        </ul>
+    </div>
+</nav>
+<br>
+<br>
+<br>
 
 <form action="giris.php" method="POST">
- <div> <label for="kullanici" style="color: brown;">(Kullanıcı Adı = g211210077@sakarya.edu.tr)</label><br>
-       <label for="kullanici"> Kullanıcı Adı :</label>
-         <input type="text" id="kullanici" name="kullanici"> 
-</div>
+    <div class="form-group">
+        <label for="kullanici">(Kullanıcı Adı = g211210077@sakarya.edu.tr)</label><br>
+        <label for="kullanici" id="kullanicilabel">Kullanıcı Adı:</label>
+        <input type="text" class="form-control" id="kullanici" name="kullanici">
+    </div>
 
- <div>  
-    <label for="sifre" style="color: brown;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Şifre = g211210077)</label><br>
-      <label for="sifre"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Şifre : </label>
-         <input type="password" id="sifre" name="sifre">
- </div>
-   <br>
+    <div class="form-group">
+        <label for="sifre">(Şifre = g211210077)</label><br>
+        <label for="sifre" id="sifrelabel">Şifre:</label>
+        <input type="password" class="form-control" id="sifre" name="sifre">
+    </div>
+
     <button type="submit" id="giris"><b>Giriş Yap</b></button>
-   
-
-
 </form>
-
-
 
 <br><br><br><br><br><br><br>
 
+<footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+        <a href="iletisim.html" class="text-white">İletişim</a>
+        <p><b>Yazar: Melek Yolcu</b></p>
+        <p><b>Mail Gönder:</b> <a href="mailto:melek54q@hotmail.com" class="text-white">melek54q@hotmail.com</a></p>
+        <p>© 2023 Tüm Hakları Saklıdır.</p>
+        <p>Designed By Melek Yolcu</p>
+    </div>
+</footer>
 
-         <footer>
-         
-         <a href="iletisim.html">İletisim </a>
-         <p><b>Yazar: Melek Yolcu</b></p>
-           <p><b>Mail Gönder</b> <a href="mailto:melek54q@hotmail.com">
-            melek54q@hotmail.com</a>.</p>
-            <p>© 2023 Tüm Hakları Saklıdır.</p>
-            <P>Designed By Melek Yolcu</P>
-         </footer>
-    
-    </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
 </html>
